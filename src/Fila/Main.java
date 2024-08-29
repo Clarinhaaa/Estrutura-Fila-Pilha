@@ -20,9 +20,7 @@ public class Main {
         }
 
         System.out.println();
-        System.out.println("Elemento removido: " + fila.remover());
-        System.out.println("Elemento removido: " + fila.remover());
-        System.out.println();
+        fila.inverterFila();
 
         fila.imprimir();
     }
