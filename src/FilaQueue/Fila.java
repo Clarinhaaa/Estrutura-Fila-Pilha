@@ -1,18 +1,20 @@
-package Fila;
+package FilaQueue;
 
 import java.util.LinkedList;
+import java.util.Queue;
+
 import Pilha.Pilha;
 
 public class Fila<T> {
-    private LinkedList<T> listaFila = new LinkedList<T>();
+    private Queue<T> listaFila = new LinkedList<T>();
     private Pilha<T> pil = new Pilha<T>();
 
     public void adicionar(T elemento) {
-        this.listaFila.addLast(elemento);
+        this.listaFila.add(elemento);
     }
 
     public T remover() {
-        return this.listaFila.removeFirst();
+        return this.listaFila.remove();
     }
 
     public boolean verificarVazia() {
@@ -25,10 +27,10 @@ public class Fila<T> {
 
     public void inverterFila() {
         while (this.listaFila.size() > 0) {
-            pil.empilhar(this.listaFila.removeFirst());
+            pil.empilhar(this.listaFila.remove());
         }
         while (this.pil.tamanho() > 0) {
-            this.listaFila.addLast(this.pil.desempilhar());
+            this.listaFila.add(this.pil.desempilhar());
         }
     }
 }

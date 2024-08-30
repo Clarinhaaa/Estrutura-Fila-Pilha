@@ -20,4 +20,8 @@ public class Pilha<T> {
     public void imprimir() {
         System.out.println(this.listaPilha.toString());
     }
+
+    public int tamanho() {
+        return this.listaPilha.size();
+    }
 }
