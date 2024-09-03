@@ -17,11 +17,11 @@ public class Pilha<T> {
         return this.listaPilha.getLast();
     }
 
-    public void imprimir() {
-        System.out.println(this.listaPilha.toString());
+    public boolean verificarVazia() {
+        return this.listaPilha.isEmpty();
     }
 
-    public int tamanho() {
-        return this.listaPilha.size();
+    public void imprimir() {
+        System.out.println(this.listaPilha.toString());
     }
 }

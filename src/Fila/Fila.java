@@ -24,11 +24,10 @@ public class Fila<T> {
     }
 
     public void inverterFila() {
-        while (this.listaFila.size() > 0) {
-            pil.empilhar(this.listaFila.removeFirst());
-        }
-        while (this.pil.tamanho() > 0) {
-            this.listaFila.addLast(this.pil.desempilhar());
-        }
+        while (!this.verificarVazia())
+            this.pil.empilhar(this.remover());
+
+        while (!this.pil.verificarVazia())
+            this.adicionar(this.pil.desempilhar());
     }
 }
